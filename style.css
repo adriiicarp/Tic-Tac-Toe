@@ -1,0 +1,74 @@
+:root{
+    --color-primary: rgb(28, 0, 34);
+    --line-style: 10px solid var(--color-primary);
+    --font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, 'sans-serif';
+}
+
+body{
+    user-select: none;
+    background-color: rgb(214, 214, 214);
+}
+
+h1 {
+    text-align: center;
+    font-size: 4rem;
+    font-family: var(--font-family);
+    color: var(--color-primary);
+}
+
+#gridContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 0fr);
+    justify-content: center;
+}
+
+.square {
+    color: var(--color-primary);
+    height: 200px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 8rem;
+    font-weight: bold;
+}
+
+.mid {
+    border-left: var(--line-style);
+    border-right: var(--line-style);
+}
+
+.up {
+    border-bottom: var(--line-style);
+}
+
+.down {
+    border-top: var(--line-style);
+}
+
+.winner {
+    background-color: rgba(15, 171, 199, 0.288);
+}
+
+dialog {
+    text-align: center;
+    min-width: 50vw;
+    background-color: rgba(240, 248, 255, 0.23) ;
+    padding: 5rem;
+    border: unset;
+    border-radius: 50px;
+}
+
+dialog h2{
+    font-family: var(--font-family);
+    font-size: xx-large;
+}
+
+dialog button{
+    padding: 1rem;
+    font-size: larger;
+}
+
+dialog::backdrop{
+    backdrop-filter: blur(10px);
+}
